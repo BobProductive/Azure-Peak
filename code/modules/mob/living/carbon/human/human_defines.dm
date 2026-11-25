@@ -82,6 +82,7 @@
 	var/special_voice = "" // For changing our voice. Used by a symptom.
 
 	var/name_override //For temporary visible name changes
+	var/obj/item/disguise_kit/active_disguise_kit
 
 	var/merctype = 0 // Used for mercenary backgrounds - check mail.dm
 	var/tokenclaimed = FALSE // Check for having received my medal. FUTURE: Persistent medals.

@@ -21,6 +21,9 @@
 
 /mob/living/carbon/human/examine(mob/user)
 	. = list()
+	if(user?.client && user != src && active_disguise_kit)
+		active_disguise_kit.register_examine(user, src)
+
 	if(!user.client?.prefs?.top_examine)
 		. += span_info("ø ------------ ø")
 	var/observer_privilege = isobserver(user)
